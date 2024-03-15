@@ -1,6 +1,5 @@
 <?php
-
-require_once('config.php');
+require_once 'config.php';
 
 function neuenEinsatzEintragen($txt)
 {
@@ -147,7 +146,6 @@ function telegramApiLocation($chatID, $botID, $threadID, $lat, $long, $MessageID
     return $result;
 }
 
-
 function deleteOldEntrys()
 {
     global $servername;
@@ -168,15 +166,14 @@ function deleteOldEntrys()
     $sql = "DELETE FROM Abfragen WHERE timestamp < '$one_month_ago'";
     
     if (mysqli_query($conn, $sql)) {
-        echo "Datensaetze erfolgreich geloescht";
+        echo "Datensätze erfolgreich gelöscht $one_month_ago";
     } else {
-        echo "Fehler beim Loeschen der Datensaetze: " . mysqli_error($conn);
+        echo "Fehler beim Löschen der Datensätze: " . mysqli_error($conn);
     }
     
     // Verbindung zur MySQL-Datenbank schließen
     mysqli_close($conn);
 }
-
 
 function telegramApiPresse($chatID, $botID, $threadID, $text)
 {

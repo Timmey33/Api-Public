@@ -1,6 +1,6 @@
 <?php
-require_once "funktionen.php";
-require_once('config.php');
+require_once 'funktionen.php';
+require_once 'config.php';
 
 /*
 Automatische Toröffnung über Alamos.
