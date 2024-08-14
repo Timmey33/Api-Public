@@ -32,7 +32,7 @@ if (isset($_GET['apikey'])) {
             "einheit"   => "Einheit: " . $_GET['einheit'],
             "ziel"      => "Adresse: " . $_GET['ziel'],
             "keyword"   => "Stichwort: #" . $_GET['keywordDescription'],
-            "message"   => "Beschreibung: " . $_GET['message'],
+            #"message"   => "Beschreibung: " . $_GET['message'],
         ];
 
         //Text imploden für Telegram
