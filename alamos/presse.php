@@ -19,19 +19,27 @@ $get_params = print_r($_GET, true);
 $log_message = "[$timestamp] GET-Parameters: " . $get_params . PHP_EOL;
 
 // In die Log-Datei schreiben
-file_put_contents($log_file, $log_message, FILE_APPEND);
-
+if (isset$($get_params])) {
+    file_put_contents($log_file, $log_message, FILE_APPEND);
+}
 
 //Wenn API Key per POST kommt
 if (isset($_GET['apikey'])) {
     if ($_GET['apikey'] == $ValidApiKeyAlamosPresse) { // Wenn Alamos ApiKey
+
+        //Wenn Vorhanden die tac Information
+        if (isset($_GET['tac'])) {
+            $stichwort = $_GET['tac'];
+        } else {
+            $stichwort = $_GET['keywordDescription'];
+        }
 
         //Array mit den GET Infos erstellen
         $EinsatzInfos = [
             "date"      => "Datum: " . $_GET['date'],
             "einheit"   => "Einheit: " . $_GET['einheit'],
             "ziel"      => "Adresse: " . $_GET['ziel'],
-            "keyword"   => "Stichwort: #" . $_GET['keywordDescription'],
+            "keyword"   => "Stichwort: " . $stichwort,
             #"message"   => "Beschreibung: " . $_GET['message'],
         ];
 
