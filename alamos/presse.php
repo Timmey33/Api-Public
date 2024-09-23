@@ -19,7 +19,7 @@ $get_params = print_r($_GET, true);
 $log_message = "[$timestamp] GET-Parameters: " . $get_params . PHP_EOL;
 
 // In die Log-Datei schreiben
-if (isset$($get_params])) {
+if (!(empty($get_params))) {
     file_put_contents($log_file, $log_message, FILE_APPEND);
 }
 
