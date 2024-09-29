@@ -38,7 +38,6 @@ if (isset($_GET['apikey'])) {
             "einheit"   => "Einheit: " . $_GET['einheit'],
             "ziel"      => "Adresse: " . $_GET['ziel'],
             "keyword"   => "Stichwort: " . $_GET['keyword'],
-            "message"   => "Beschreibung: " . $_GET['txt'],
         ];
 
         //Text imploden für Telegram
@@ -94,10 +93,9 @@ if (isset($_GET['apikey'])) {
         // Test Rückmeldungen per URL an mich.
         $answersUrl= "https://availability-27b55.firebaseapp.com/feedback?dbId=" . $_GET['dbId'] . "&sharedSecret=" . $_GET['dbId_shared_secret'];
         telegramApi($AdminChatID, $PresseBotID, $answersUrl);
-    
-    
-    
-    
+
+
+        
     } else {
         echo "Unbekannter API Key";
     }
