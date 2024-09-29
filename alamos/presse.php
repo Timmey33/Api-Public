@@ -31,13 +31,15 @@ if (isset($_GET['apikey'])) {
     if ($_GET['apikey'] == $ValidApiKeyAlamosPresse) { // Wenn Alamos ApiKey
 
 
+        $gMapsUrl = 'https://maps.google.com/?q=' . $_GET['lat'] .',' . $_GET['lon'];
+        $gMapsTxt = '<a href="' . $gMapsUrl . '">Adresse:</a> ';
 
         //Array mit den GET Infos erstellen
         $EinsatzInfos = [
-            "date"      => "Datum: " . $_GET['date'],
-            "einheit"   => "Einheit: " . $_GET['einheit'],
-            "ziel"      => "Adresse: " . $_GET['ziel'],
-            "keyword"   => "Stichwort: " . $_GET['keyword'],
+            "Datum: "       . $_GET['date'],
+            "Einheit: "     . $_GET['einheit'],
+            $gMapsTxt       . $_GET['ziel'],
+            "Stichwort: "   . $_GET['keyword'],
         ];
 
         //Text imploden für Telegram

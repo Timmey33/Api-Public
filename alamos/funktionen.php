@@ -179,7 +179,7 @@ function telegramApiPresse($chatID, $botID, $threadID, $text)
 {
     $curl = curl_init();
     curl_setopt($curl, CURLOPT_POST, 1);
-    curl_setopt($curl, CURLOPT_POSTFIELDS, ["chat_id" => $chatID, "text" => $text, "message_thread_id" => $threadID, "parse_mode" => "html", "disable_web_page_preview" => "true"]);
+    curl_setopt($curl, CURLOPT_POSTFIELDS, ["chat_id" => $chatID, "text" => $text, "message_thread_id" => $threadID, "parse_mode" => "html", "disable_web_page_preview" => "false"]);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($curl, CURLOPT_URL, 'https://api.telegram.org/' . $botID . '/sendMessage');
     $result = curl_exec($curl);
