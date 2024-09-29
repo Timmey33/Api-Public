@@ -34,7 +34,7 @@ if (isset($_GET['apikey'])) {
             "date"      => "Datum: " . $_GET['date'],
             "einheit"   => "Einheit: " . $_GET['einheit'],
             "ziel"      => "Adresse: " . $_GET['ziel'],
-            "keyword"   => "Stichwort: " . $_GET['ziel'],
+            "keyword"   => "Stichwort: " . $_GET['keyword'],
             "message"   => "Beschreibung: " . $_GET['txt'],
         ];
 
