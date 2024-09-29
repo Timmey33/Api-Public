@@ -27,20 +27,15 @@ if (!(empty($get_params))) {
 if (isset($_GET['apikey'])) {
     if ($_GET['apikey'] == $ValidApiKeyAlamosPresse) { // Wenn Alamos ApiKey
 
-        //Wenn Vorhanden die tac Information
-        if (isset($_GET['tac'])) {
-            $stichwort = $_GET['tac'];
-        } else {
-            $stichwort = $_GET['keywordDescription'];
-        }
+
 
         //Array mit den GET Infos erstellen
         $EinsatzInfos = [
             "date"      => "Datum: " . $_GET['date'],
             "einheit"   => "Einheit: " . $_GET['einheit'],
             "ziel"      => "Adresse: " . $_GET['ziel'],
-            "keyword"   => "Stichwort: " . $stichwort,
-            #"message"   => "Beschreibung: " . $_GET['message'],
+            "keyword"   => "Stichwort: " . $_GET['ziel'],
+            "message"   => "Beschreibung: " . $_GET['txt'],
         ];
 
         //Text imploden für Telegram
