@@ -5,7 +5,10 @@ require_once 'config.php';
 
 /*
 Telegram Gruppe Presse
+TEST
 */
+
+
 // Log-Datei definieren
 $log_file = 'get_log.txt';
 
