@@ -86,6 +86,15 @@ if (isset($_GET['apikey'])) {
         if (isset($_GET['lat']) && isset($_GET['lon'])) {
             telegramApiLocation($PresseChatID, $PresseBotID, $threadID, $_GET['lat'], $_GET['lon'], $messageID);
         }
+
+
+        // Test Rückmeldungen per URL an mich.
+        $answersUrl= "https://availability-27b55.firebaseapp.com/feedback?dbId=" . $_GET['dbId'] . "&sharedSecret=" . $_GET['dbId_shared_secret'];
+        telegramApi($AdminChatID, $botID, $text);
+    
+    
+    
+    
     } else {
         echo "Unbekannter API Key";
     }
