@@ -21,16 +21,18 @@ $get_params = print_r($_GET, true);
 // Log-Nachricht erstellen
 $log_message = "[$timestamp] GET-Parameters: " . $get_params . PHP_EOL;
 
-// In die Log-Datei schreiben
-if (!(empty($get_params))) {
-    file_put_contents($log_file, $log_message, FILE_APPEND);
-}
+
 
 //Wenn API Key per POST kommt
 if (isset($_GET['apikey'])) {
     if ($_GET['apikey'] == $ValidApiKeyAlamosPresse) { // Wenn Alamos ApiKey
 
+        // In die Log-Datei schreiben
+        if (!(empty($_GET))) {
+            file_put_contents($log_file, $log_message, FILE_APPEND);
+        }
 
+        //GoolgeMaps
         $gMapsUrl = 'https://maps.google.com/?q=' . $_GET['lat'] .',' . $_GET['lon'];
         $gMapsTxt = '<a href="' . $gMapsUrl . '">Adresse:</a> ';
 
