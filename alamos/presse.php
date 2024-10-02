@@ -56,7 +56,9 @@ if (isset($_GET['apikey'])) {
             "Datum: "       . $_GET['date'],
             "Einheit: "     . $_GET['einheit'],
             $gMapsTxt       . $_GET['ziel'],
-            "Stichwort: "   . $_GET['keyword'] . "\n\n",
+            "Stichwort: "   . $_GET['keyword'],
+            "",
+            "--"
         ];
 
         //Text imploden für Telegram
