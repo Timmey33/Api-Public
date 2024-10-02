@@ -57,8 +57,7 @@ if (isset($_GET['apikey'])) {
             "Einheit: "     . $_GET['einheit'],
             $gMapsTxt       . $_GET['ziel'],
             "Stichwort: "   . $_GET['keyword'],
-            "",
-            "--"
+            " ",
         ];
 
         //Text imploden für Telegram
@@ -90,7 +89,7 @@ if (isset($_GET['apikey'])) {
 
         // Über das Mapping iterieren und die passende Thread-ID setzen
         foreach ($mapping as $keyword => $id) {
-            if (stristr($EinsatzInfos['einheit'], $keyword)) {
+            if (stristr($EinsatzInfos['Einheit'], $keyword)) {
                 $threadID = $id;
                 break;
             }
@@ -101,14 +100,10 @@ if (isset($_GET['apikey'])) {
         $result = telegramApiPresse($PresseChatID, $PresseBotID, $threadID, $text);
 
         //Location senden
-        $messageID = json_decode($result, true)['result']['message_id'];
-
-
-
-
+        //$messageID = json_decode($result, true)['result']['message_id'];
         //if (isset($_GET['lat']) && isset($_GET['lon'])) {
-//            telegramApiLocation($PresseChatID, $PresseBotID, $threadID, $_GET['lat'], $_GET['lon'], $messageID);
-//        }
+        //telegramApiLocation($PresseChatID, $PresseBotID, $threadID, $_GET['lat'], $_GET['lon'], $messageID);
+        //}
 
 
         // Test Rückmeldungen per URL an mich.
