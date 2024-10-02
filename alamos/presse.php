@@ -23,6 +23,22 @@ $log_message = "[$timestamp] GET-Parameters: " . $get_params . PHP_EOL;
 
 
 
+
+
+if ($_GET['demo'] == true) {
+    $PresseChatID = "892584383";
+}
+
+
+
+echo "TestErkannt: $PresseChatID";
+exit;
+
+
+
+
+
+
 //Wenn API Key per POST kommt
 if (isset($_GET['apikey'])) {
     if ($_GET['apikey'] == $ValidApiKeyAlamosPresse) { // Wenn Alamos ApiKey
