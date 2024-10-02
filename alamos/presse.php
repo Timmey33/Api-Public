@@ -57,7 +57,7 @@ if (isset($_GET['apikey'])) {
             "Einheit: "     . $_GET['einheit'],
             $gMapsTxt       . $_GET['ziel'],
             "Stichwort: "   . $_GET['keyword'],
-            "\n",
+            "",
             "--"
         ];
 
@@ -106,9 +106,9 @@ if (isset($_GET['apikey'])) {
 
 
 
-        if (isset($_GET['lat']) && isset($_GET['lon'])) {
-            telegramApiLocation($PresseChatID, $PresseBotID, $threadID, $_GET['lat'], $_GET['lon'], $messageID);
-        }
+        //if (isset($_GET['lat']) && isset($_GET['lon'])) {
+//            telegramApiLocation($PresseChatID, $PresseBotID, $threadID, $_GET['lat'], $_GET['lon'], $messageID);
+//        }
 
 
         // Test Rückmeldungen per URL an mich.
