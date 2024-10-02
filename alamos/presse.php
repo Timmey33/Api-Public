@@ -26,7 +26,7 @@ $log_message = "[$timestamp] GET-Parameters: " . $get_params . PHP_EOL;
 
 
 if ($_GET['demo'] == "true") {
-    $PresseChatID = "892584383";
+    $PresseChatID = "-1002091246017";
 }
 
 
