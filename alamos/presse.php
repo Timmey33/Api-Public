@@ -90,7 +90,7 @@ if (isset($_GET['apikey'])) {
 
         // Über das Mapping iterieren und die passende Thread-ID setzen
         foreach ($mapping as $keyword => $id) {
-            if (stristr($EinsatzInfos['Einheit'], $keyword)) {
+            if (stristr( $_GET['einheit'], $keyword)) {
                 $threadID = $id;
                 break;
             }
