@@ -63,7 +63,7 @@ if (isset($_GET['apikey'])) {
         $text = implode("\n", $EinsatzInfos);
 
         //An mich senden
-        //telegramApiPresse('892584383', $PresseBotID, 0, $text);
+        telegramApiPresse('892584383', $PresseBotID, 0, $text);
 
         //An Alle senden
         telegramApiPresse($PresseChatID, $PresseBotID, $threadIDAlle, $text);
