@@ -32,7 +32,6 @@ if ($_GET['demo'] == "true") {
 
 
 echo "TestErkannt: $PresseChatID";
-exit;
 
 
 
