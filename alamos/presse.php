@@ -56,9 +56,7 @@ if (isset($_GET['apikey'])) {
             "Datum: "       . $_GET['date'],
             "Einheit: "     . $_GET['einheit'],
             $gMapsTxt       . $_GET['ziel'],
-            "Stichwort: "   . $_GET['keyword'],
-            "",
-            "--"
+            "Stichwort: "   . $_GET['keyword']
         ];
 
         //Text imploden für Telegram
@@ -108,8 +106,8 @@ if (isset($_GET['apikey'])) {
 
 
         // Test Rückmeldungen per URL an mich.
-        $answersUrl= "https://availability-27b55.firebaseapp.com/feedback?dbId=" . $_GET['dbId'] . "&sharedSecret=" . $_GET['dbId_shared_secret'];
-        telegramApi($AdminChatID, $PresseBotID, $answersUrl);
+        //$answersUrl= "https://availability-27b55.firebaseapp.com/feedback?dbId=" . $_GET['dbId'] . "&sharedSecret=" . $_GET['dbId_shared_secret'];
+        //telegramApi($AdminChatID, $PresseBotID, $answersUrl);
 
 
         
