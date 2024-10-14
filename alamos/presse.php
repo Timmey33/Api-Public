@@ -49,14 +49,15 @@ if (isset($_GET['apikey'])) {
 
         //GoolgeMaps
         $gMapsUrl = 'https://maps.google.com/?q=' . $_GET['lat'] .',' . $_GET['lon'];
-        $gMapsTxt = '<a href="' . $gMapsUrl . '">Adresse:</a> ';
+        $gMapsTxt = '<a href="' . $gMapsUrl . '">Google Maps</a> ';
 
         //Array mit den GET Infos erstellen
         $EinsatzInfos = [
             "Datum: "       . $_GET['date'],
             "Einheit: "     . $_GET['einheit'],
-            $gMapsTxt       . $_GET['ziel'],
-            "Stichwort: "   . $_GET['keyword']
+            "Stichwort: "   . $_GET['keyword'],
+            "Adresse: "     . $_GET['ziel'],
+            $gMapsTxt
         ];
 
         //Text imploden für Telegram

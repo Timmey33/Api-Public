@@ -22,7 +22,7 @@ if (isset($_POST['apikey']))
             abfrageLoggen("OpenGate");
 
             //Nachricht in die Presse Gruppe versenden.
-            telegramApiPresse($PresseChatID, $PresseBotID, $threadIDGeilenkausen, "Das Garagentor in Geilenkausen wurde durch eine Alarmierung geöffnet.");
+            #telegramApiPresse($PresseChatID, $PresseBotID, $threadIDGeilenkausen, "Das Garagentor in Geilenkausen wurde durch eine Alarmierung geöffnet.");
             //Mit "Alarm" wird das Tor geoeffnet! (Niemals aendern oder einfach echo'n)
             echo "Alarm";
         }
